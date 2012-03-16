@@ -38,8 +38,8 @@ user editable maps to be used. TripleA is versatile, scalable and robust.
 %prep
 %setup -q -n %{name}_%{_version2}
 %patch0
-%__rm triplea_mac_os_x.sh
-%__rm triplea_windows.bat
+rm triplea_mac_os_x.sh
+rm triplea_windows.bat
 dos2unix     readme.html changelog.txt doc/*.html
 
 %build
@@ -48,24 +48,24 @@ dos2unix     readme.html changelog.txt doc/*.html
 %install
 # ant makes a zip file, so unzip that into the final dir.
 # Don't know another way to do it, yet.
-%__install -dm 755 %{buildroot}%{_gamesdatadir}
-%__unzip -q -d %{buildroot}%{_gamesdatadir} release/%{name}_%{_version2}_all_platforms.zip
+install -dm 755 %{buildroot}%{_gamesdatadir}
+unzip -q -d %{buildroot}%{_gamesdatadir} release/%{name}_%{_version2}_all_platforms.zip
 
 # startscript
-%__install -dm 755 %{buildroot}%{_gamesbindir}
+install -dm 755 %{buildroot}%{_gamesbindir}
 
-%__cat > %{buildroot}%{_gamesbindir}/%{name} << EOF
+cat > %{buildroot}%{_gamesbindir}/%{name} << EOF
 #!/bin/sh
 %{_gamesdatadir}/%{name}/%{name}_unix.sh
 EOF
 chmod 755 %{buildroot}%{_gamesbindir}/%{name}
 
 # icon and menu-entry
-%__install -dm 755 %{buildroot}%{_datadir}/pixmaps
-%__install -m 644 %{SOURCE1} %{buildroot}%{_datadir}/pixmaps
+install -dm 755 %{buildroot}%{_datadir}/pixmaps
+install -m 644 %{SOURCE1} %{buildroot}%{_datadir}/pixmaps
 
-%__install -dm 755 %{buildroot}%{_datadir}/applications
-%__cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
+install -dm 755 %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
 Encoding=UTF-8
 Comment=Axis and Allies clone
