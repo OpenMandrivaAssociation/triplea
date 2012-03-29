@@ -1,12 +1,12 @@
 %define	_version2	%(echo %version | tr . _)
 
 Name:		triplea
-Version:	1.3.2.2
+Version:	1.5.2.0
 Release:	1
 Summary:	A networked open source strategy game
 Group:		Games/Strategy
 License:	GPLv2
-URL:		http://triplea.sourceforge.net/mywiki
+URL:		http://triplea.sourceforge.net/
 Source0:	%{name}_%{_version2}_source_code_only.zip
 Source1:	%{name}.png
 Patch0:		%{name}-build.xml.patch
@@ -40,7 +40,7 @@ user editable maps to be used. TripleA is versatile, scalable and robust.
 %patch0
 rm triplea_mac_os_x.sh
 rm triplea_windows.bat
-dos2unix     readme.html changelog.txt doc/*.html
+dos2unix readme.html changelog.txt doc/*.html doc/*.css
 
 %build
 %ant zip
