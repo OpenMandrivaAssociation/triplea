@@ -1,11 +1,11 @@
 %define	_version2	%(echo %version | tr . _)
 
 Name:		triplea
-Version:	1.5.2.1
+Version:	1.6.1.1
 Release:	1
 Summary:	A networked open source strategy game
 Group:		Games/Strategy
-License:	GPLv2
+License:	GPLv2+
 URL:		http://triplea.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}_%{_version2}_source_code_only.zip
 Source1:	%{name}.png
