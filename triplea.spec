@@ -10,6 +10,7 @@ URL:		http://triplea.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}_%{_version2}_source_code_only.zip
 Source1:	%{name}.png
 Patch0:		%{name}-build.xml.patch
+
 BuildRequires:	ant
 BuildRequires:	dos2unix
 BuildRequires:	jakarta-commons-codec
@@ -49,7 +50,7 @@ dos2unix readme.html changelog.txt doc/*.html doc/*.css
 # ant makes a zip file, so unzip that into the final dir.
 # Don't know another way to do it, yet.
 install -dm 755 %{buildroot}%{_gamesdatadir}
-unzip -q -d %{buildroot}%{_gamesdatadir} release/%{name}_%{_version2}_all_platforms.zip
+unzip -q -d %{buildroot}%{_gamesdatadir} release/%{name}_all_platforms.zip
 
 # startscript
 install -dm 755 %{buildroot}%{_gamesbindir}
@@ -79,7 +80,6 @@ Terminal=false
 EOF
 
 %files
-%defattr(-,root,root,-)
 %doc changelog.txt readme.html doc/*
 %{_gamesbindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
