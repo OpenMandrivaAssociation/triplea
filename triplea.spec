@@ -38,7 +38,7 @@ user editable maps to be used. TripleA is versatile, scalable and robust.
 
 %prep
 %setup -q -n %{name}_%{_version2}
-%patch0
+%patch0 -p1 -b .orig~
 rm triplea_mac_os_x.sh
 rm triplea_windows.bat
 dos2unix readme.html changelog.txt doc/*.html doc/*.css
