@@ -29,7 +29,7 @@ BuildArch:	noarch
 %description
 Triplea is a networked open source strategy game, based on the 
 Axis & Allies board game. It allows people to implement and play various 
-strategy board games (ie. Axis & Allies). The TripleA engine has full 
+strategy board games (i.e. Axis & Allies). The TripleA engine has full 
 networking support for online play, support for sounds, XML support for 
 game files, and has its own imaging subsystem that allows for customized
 user editable maps to be used. TripleA is versatile, scalable and robust.
