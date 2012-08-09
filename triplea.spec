@@ -44,6 +44,10 @@ rm triplea_windows.bat
 dos2unix readme.html changelog.txt doc/*.html doc/*.css
 
 %build
+# ant doesn't make required folders in mdv2011 and earlier.
+%if %mdkversion =< 201100
+mkdir bin release
+%endif
 %ant zip
 
 %install
