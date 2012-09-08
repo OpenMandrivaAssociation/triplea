@@ -1,7 +1,7 @@
 %define	_version2	%(echo %version | tr . _)
 
 Name:		triplea
-Version:	1.6.1.1
+Version:	1.6.1.2
 Release:	1
 Summary:	A networked open source strategy game
 Group:		Games/Strategy
