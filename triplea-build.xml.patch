@@ -1,0 +1,11 @@
+--- triplea_1_6_1_1/build.xml.orig	2012-07-30 18:37:20.000000000 +0200
++++ triplea_1_6_1_1/build.xml	2012-08-01 04:00:58.770708529 +0200
+@@ -25,7 +25,7 @@
+ 	<property name="src" location="src" />
+ 	<property name="test-classes" location="testclasses" />
+ 	<property name="test-src" location="test" />
+-	<property name="zip.prefix" value="triplea_${triplea.version}" />
++	<property name="zip.prefix" value="triplea" />
+ 
+ 	<path id="build.lib">
+ 		<fileset dir="lib">
