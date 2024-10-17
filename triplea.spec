@@ -6,7 +6,7 @@ Release:	1
 Summary:	A networked open source strategy game
 Group:		Games/Strategy
 License:	GPLv2+
-URL:		http://triplea.sourceforge.net/
+URL:		https://triplea.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}_%{_version2}_source_code_only.zip
 Source1:	%{name}.png
 Patch0:		%{name}-build.xml.patch
